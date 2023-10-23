@@ -13,7 +13,7 @@ public class Cipher{
     public void encryption(){
         swap();
         int c1=weishu(num);
-        // 每位数都加上 5
+        // 每位数都加上5
         int password = addFiveToDigits(num);
         password*=2;
         // 将所有数字反转
