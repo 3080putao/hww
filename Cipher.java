@@ -10,13 +10,14 @@ public class Cipher{
     public int getNum() {
         return num;
     }
-    public void encryption(){
+    public void encryption(){ //加密
+		//将数的个位和十位交换位置
         swap();
         int c1=weishu(num);
-        // 每位数都加上5
+		//每位数都加上5，且对10求余
         int password = addFiveToDigits(num);
         password*=2;
-        // 将所有数字反转
+		//反转位数
         password = reverseDigits(password);
         int c2=weishu(password);
             while(c1!=c2){
@@ -36,7 +37,7 @@ public class Cipher{
         }
         return digitsAdded;
     }
-    public int reverseDigits(int number) {
+    public int reverseDigits(int number) { //反转数字
         int reversedNumber = 0;
 
         while (number > 0) {
@@ -47,7 +48,7 @@ public class Cipher{
         }
         return reversedNumber;
     }
-    public int weishu(int number){
+    public int weishu(int number){ //统计位数
         int count=0;
         while(number!=0){
             number /=10;
@@ -55,14 +56,14 @@ public class Cipher{
         }
         return count;
     }
-    public void swap(){
+    public void swap(){ //交换个位和十位
         int temp=num%100;
         int a=(temp%10)*10;
         a+=temp/10;
         num-=temp;
         num+=a;
     }
-    public void decrypt(){
+    public void decrypt(){ //解密
         int c1=weishu(num);
         int ming= reverseDigits(num);
         ming/=2;
