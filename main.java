@@ -1,10 +1,10 @@
 package project;
 import java.util.Scanner;
-public class main {
+public class main{
     private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
+        System.out.println("欢迎来到密码加解密系统");
             while (true) {
-                System.out.println("欢迎来到密码加解密系统");
                 System.out.println("请选择操作：");
                 System.out.println("1. 加密");
                 System.out.println("2. 解密");
