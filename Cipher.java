@@ -14,7 +14,6 @@ public class Cipher{
 		//将数的个位和十位交换位置
         swap();
         int c1=weishu(num);
-		//每位数都加上5，且对10求余
         int password = addFiveToDigits(num);
         password*=2;
 		//反转位数
@@ -26,7 +25,7 @@ public class Cipher{
             }
         System.out.println("加密结果：" + password);
     }
-    public int addFiveToDigits(int num) {
+    public int addFiveToDigits(int num) { //每位数都加上5，且对10求余
         int digitsAdded = 0;
         int multiplier = 1;
         while (num > 0) {
@@ -86,7 +85,7 @@ public class Cipher{
         }
         System.out.println("解密结果：" + ming);
     }
-    public int subFiveToDigits(int num) {
+    public int subFiveToDigits(int num) { //每位数-5，且+10再-5
         int digitsSubed = 0;
         int multiplier = 1;
         while (num > 0) {
