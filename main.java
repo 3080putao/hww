@@ -23,7 +23,7 @@ public class main{
                         num = scanner.nextInt();
                         Cipher ci1 = new Cipher();
                         ci1.setNum(num);
-                        ci1.encryption();
+                        ci1.decrypt();
                         break;
                     case 3:
                         System.out.println("谢谢使用，再见！");
